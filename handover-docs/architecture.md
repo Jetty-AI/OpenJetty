@@ -3,7 +3,7 @@
 > **The system design + the shared contracts.** This is the single source of truth for *what
 > the system is*: components, data model, API contracts, and workflow.
 > Per-role build details ("what each person codes") → `build-specs.md`.
-> Who builds what + build order → `division-of-work.md`.
+> Build order, phases, and verification → `implementation-guide.md`.
 
 ---
 
@@ -140,7 +140,7 @@ Model **Fable 5 (`claude-fable-5`)**. No vector DB — full structured memory in
   "location": "San Francisco, CA",
   "rating": 4.9,
   "review_count": 132,
-  "source": ["google_places", "healthgrades"],
+  "source": ["sample"],
   "specialties": [],
   "conditions_treated": [],
   "services": [],
@@ -223,10 +223,10 @@ sequenceDiagram
     participant FE as Frontend
     participant BE as Backend
     participant AI as Claude Engines
-    participant SC as Scraping
+    participant SC as Sample Data
 
     Note over SC,AI: BEFORE DEMO — build Business Memory
-    SC->>BE: Raw business records (10-15 doctors)
+    SC->>BE: Hand-authored sample records (~8 doctors)
     BE->>AI: A2 Business Memory Builder
     AI-->>BE: Business Memory → stored
 

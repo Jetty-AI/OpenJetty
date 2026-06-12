@@ -43,7 +43,7 @@ plan back to me in 5 bullets so I know you understand. Then wait — don't build
 ```
 Scaffold a monorepo: frontend/ (Next.js + Tailwind via create-next-app, App Router), backend/
 (FastAPI in main.py with a /health route returning {"status":"ok"} and CORS enabled), and
-sample-data/ (an empty folder for hand-written business JSON records). Add a root .gitignore. Give
+sample-data/ (already populated: businesses/ doctor JSON records + patient/ demo upload PDFs). Add a root .gitignore. Give
 me the commands to run both servers.
 ```
 ✅ Both folders exist; both servers run.
@@ -108,21 +108,24 @@ Build Screen 1 (Upload/Intake): a situation textarea + multi-PDF upload calling 
 (architecture.md §4.1) in clean sections and highlight the lab trend. Start with mock JSON, then
 switch to the real endpoint.
 ```
-✅ Upload the 3 sample PDFs → Memory screen shows merged memory + declining ferritin trend.
+✅ Upload the 3 sample PDFs from `sample-data/patient/` → Memory screen shows merged memory + declining ferritin trend.
 
 ---
 
 # PHASE 2 — Business data + Matching
 
 ### P2.1 — Write sample doctor data
+> ✅ **Already done** — 8 doctor records are in `sample-data/businesses/` (3 hero + 5 more) and the
+> demo patient PDFs + situation text in `sample-data/patient/`. You can skip to P2.2. Only use the
+> prompt below if you want to add *more* doctors.
 ```
-Create 5–10 realistic SAMPLE doctor records (no scraping, no APIs) in the Raw business record shape
-from architecture.md §4.5, saved as JSON files in sample-data/. Include name, rating, 2–4 sample
+Create more realistic SAMPLE doctor records (no scraping, no APIs) in the Raw business record shape
+from architecture.md §4.5, saved as JSON files in sample-data/businesses/. Include name, rating, 2–4 sample
 reviews, a written profile_text, and a written guideline_text per doctor. Make 3 "hero" doctors
 distinct: a hematologist specializing in iron deficiency/malabsorption (the right match for the
 ferritin story), plus a gastroenterologist and an internist as clearly weaker fits.
 ```
-✅ `sample-data/` has 5–10 JSON files in the §4.5 shape, with 3 sharp hero doctors.
+✅ `sample-data/businesses/` has the §4.5 JSON files, with 3 sharp hero doctors.
 
 ### P2.2 — Engines A2 + A3
 ```
@@ -139,7 +142,7 @@ not keyword search.
 ```
 Add POST /ingest/business (accept a Raw business record §4.5, call A2, store Business Memory) and
 POST /match (load the user's memory + all business memories, call A3, return §4.3). Add a seed step
-that reads sample-data/*.json and ingests them on startup.
+that reads sample-data/businesses/*.json and ingests them on startup.
 ```
 ✅ Doctors ingested on startup; POST /match returns ranked matches.
 

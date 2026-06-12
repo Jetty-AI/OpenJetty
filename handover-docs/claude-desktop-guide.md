@@ -215,7 +215,7 @@ every session:
 # OpenJetty
 - Stack: Next.js + Tailwind (frontend), FastAPI + Postgres (backend), Claude Fable 5 (claude-fable-5)
 - Build per implementation-guide.md, phase by phase. Contracts are fixed in architecture.md §4/§5.
-- Business data = hand-authored sample JSON in sample-data/ (no scraping, no external APIs).
+- Business data = hand-authored sample JSON in sample-data/businesses/ (no scraping, no external APIs). Demo patient PDFs in sample-data/patient/.
 - Frontend talks to backend via NEXT_PUBLIC_API_URL. Build against mock JSON first.
 - Render JSON from the backend; don't compute logic on the frontend.
 - Solo build: commit directly to main and push often. Never create branches or PRs.

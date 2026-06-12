@@ -1,0 +1,16 @@
+{
+  "business_id": "dr-james-reed",
+  "name": "Dr. James Reed, MD",
+  "specialty": "Endocrinology",
+  "location": "Palo Alto, CA",
+  "rating": 4.8,
+  "review_count": 96,
+  "reviews": [
+    "Dr. Reed finally got my thyroid medication dialed in after years of feeling exhausted. My energy is back.",
+    "Excellent with diabetes management. Very data-driven and thorough.",
+    "He took my hormonal symptoms seriously when other doctors dismissed them."
+  ],
+  "profile_text": "Dr. James Reed is a board-certified endocrinologist specializing in hormonal and metabolic disorders. He treats thyroid disease (hypothyroidism, hyperthyroidism, Hashimoto's), diabetes, adrenal disorders, and other hormonal causes of fatigue, weight change, and metabolic dysfunction. Patients with unexplained tiredness are frequently referred to him to rule out thyroid and endocrine causes.",
+  "guideline_text": "Workup of fatigue with suspected endocrine origin: evaluate TSH, free T4, and thyroid antibodies for thyroid dysfunction; assess fasting glucose and HbA1c for diabetes; consider a morning cortisol if adrenal insufficiency is suspected. Thyroid disease is a common and treatable contributor to chronic fatigue and should be excluded. Endocrine evaluation does not address iron-deficiency anemia, which falls outside this specialty's scope and warrants a hematology referral.",
+  "source": ["sample"]
+}

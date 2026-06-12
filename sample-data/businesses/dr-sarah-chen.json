@@ -1,0 +1,17 @@
+{
+  "business_id": "dr-sarah-chen",
+  "name": "Dr. Sarah Chen, MD",
+  "specialty": "Hematology",
+  "location": "San Francisco, CA",
+  "rating": 4.9,
+  "review_count": 187,
+  "reviews": [
+    "After 18 months and four doctors telling me my labs were 'normal,' Dr. Chen looked at my ferritin trend across all of my reports and immediately saw the decline everyone else missed. IV iron changed my life.",
+    "She's the first specialist who actually investigated WHY my iron was low instead of just handing me supplements that never worked. Turned out I had malabsorption.",
+    "Brilliant with complex, treatment-resistant iron-deficiency cases. She explained my bloodwork in a way three GPs never bothered to.",
+    "Thorough, patient, and genuinely listens. She ordered the right tests on the first visit and had a clear plan by the second."
+  ],
+  "profile_text": "Dr. Sarah Chen is a board-certified hematologist with 14 years of experience specializing in iron metabolism disorders and unexplained anemia. Her practice focuses on patients with refractory (treatment-resistant) iron deficiency, particularly those whose oral iron supplements have failed and whose fatigue has gone unexplained despite multiple normal-appearing lab panels. She is recognized for tracking subtle lab trends over time rather than reading single reports in isolation, and for systematically hunting down the root cause of iron loss, including malabsorption conditions such as celiac disease, H. pylori infection, and inflammatory bowel disease. She runs a dedicated IV iron infusion clinic for patients who cannot tolerate or absorb oral iron.",
+  "guideline_text": "Clinical approach to suspected iron-deficiency anemia: (1) Confirm with ferritin, serum iron, transferrin saturation, total iron-binding capacity, CBC with indices, and reticulocyte count; interpret ferritin trends longitudinally rather than as isolated values. (2) When oral iron has failed after an adequate trial, presume intolerance, non-adherence, or malabsorption rather than simply re-prescribing. (3) Investigate the underlying cause: screen for celiac disease (tTG-IgA), H. pylori, occult GI blood loss, and menstrual losses, and co-manage with gastroenterology when a GI source is suspected. (4) For confirmed malabsorption or oral-iron failure, initiate intravenous iron repletion (ferric carboxymaltose or iron sucrose) and recheck ferritin and hemoglobin at 4 to 8 weeks. (5) Always evaluate B12 and folate concurrently in fatigued patients, since combined deficiencies are common in restrictive or vegetarian diets.",
+  "source": ["sample"]
+}

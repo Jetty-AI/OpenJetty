@@ -121,7 +121,7 @@ NEXT_PUBLIC_API_URL to the Railway backend URL, deploy, and give me the live sit
 
 **Prompt (Claude Code):**
 ```
-Open the deployed site and run the full flow end-to-end: upload the 3 sample PDFs → see the memory →
+Open the deployed site and run the full flow end-to-end: upload the 3 sample PDFs from sample-data/patient/ → see the memory →
 get matches → open prep → chat with the proxy. Tell me if anything fails and fix it.
 ```
 ✅ The whole loop runs on the **live URLs**, not localhost. Run it **twice**, clean.

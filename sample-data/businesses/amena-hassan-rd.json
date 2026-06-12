@@ -1,0 +1,16 @@
+{
+  "business_id": "amena-hassan-rd",
+  "name": "Amena Hassan, RD, MS",
+  "specialty": "Clinical Nutrition & Dietetics",
+  "location": "Berkeley, CA",
+  "rating": 4.9,
+  "review_count": 64,
+  "reviews": [
+    "Amena built a vegetarian iron plan for me that actually worked. So practical and supportive.",
+    "She helped me understand which foods to pair for better iron absorption.",
+    "Wonderful for plant-based nutrition and supplementation guidance."
+  ],
+  "profile_text": "Amena Hassan is a registered dietitian with a master's in clinical nutrition, specializing in plant-based and vegetarian diets, iron and micronutrient optimization, and the dietary management of fatigue and nutritional deficiency. She helps patients improve nutrient intake and absorption through food-first strategies and evidence-based supplementation, and works alongside physicians rather than replacing medical diagnosis.",
+  "guideline_text": "Nutritional management of iron and B12 in restrictive diets: assess dietary iron sources and pair non-heme iron with vitamin C to enhance absorption while avoiding inhibitors such as tea, coffee, and calcium at mealtimes. For vegetarians and vegans, monitor B12 and recommend supplementation as needed. Nutrition counseling supports but does not replace medical evaluation; patients with abnormal labs, ongoing decline, or suspected malabsorption should be referred to a physician (hematology or gastroenterology) for diagnosis and treatment.",
+  "source": ["sample"]
+}

@@ -61,7 +61,7 @@ specializing in iron deficiency / malabsorption (the right match for the ferriti
 gastroenterologist and an internist who are clearly weaker fits. This is what makes the match
 obvious and the demo land.
 
-> *Behind the scenes:* these are plain JSON files in a `sample-data/` folder, in the §4.5 shape.
+> *Behind the scenes:* these are plain JSON files in `sample-data/businesses/`, in the §4.5 shape.
 
 ---
 
@@ -70,7 +70,7 @@ obvious and the demo land.
 **What happens:** the sample records are loaded into the backend on startup (a seed step posts each
 one to `/ingest/business`).
 
-> *Behind the scenes:* the backend reads `sample-data/*.json` and runs each through the ingest path.
+> *Behind the scenes:* the backend reads `sample-data/businesses/*.json` and runs each through the ingest path.
 
 **Why it matters:** by the time the demo starts, the "businesses" already exist in the system —
 nothing is fetched live on stage.

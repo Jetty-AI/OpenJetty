@@ -1,0 +1,16 @@
+{
+  "business_id": "dr-robert-tanaka",
+  "name": "Dr. Robert Tanaka, MD",
+  "specialty": "Nephrology",
+  "location": "San Jose, CA",
+  "rating": 4.5,
+  "review_count": 71,
+  "reviews": [
+    "Dr. Tanaka manages my kidney disease with great care and clear explanations.",
+    "He caught my declining kidney function early and helped slow it down.",
+    "Very knowledgeable about the anemia that comes with kidney problems."
+  ],
+  "profile_text": "Dr. Robert Tanaka is a board-certified nephrologist treating chronic kidney disease, hypertension-related kidney damage, electrolyte disorders, and the anemia of chronic kidney disease. He manages patients whose anemia stems from reduced erythropoietin production due to declining renal function.",
+  "guideline_text": "Anemia in the context of kidney disease: assess eGFR, creatinine, and urine albumin alongside a CBC and iron studies. Anemia of chronic kidney disease results from impaired erythropoietin production and is managed with erythropoiesis-stimulating agents and iron support. This applies only when reduced kidney function is present; in patients with normal renal function, iron-deficiency anemia should be evaluated by hematology rather than nephrology.",
+  "source": ["sample"]
+}

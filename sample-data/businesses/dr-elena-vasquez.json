@@ -1,0 +1,16 @@
+{
+  "business_id": "dr-elena-vasquez",
+  "name": "Dr. Elena Vasquez, MD",
+  "specialty": "Cardiology",
+  "location": "San Francisco, CA",
+  "rating": 4.8,
+  "review_count": 134,
+  "reviews": [
+    "Dr. Vasquez is an outstanding cardiologist. She managed my arrhythmia expertly.",
+    "Thorough cardiac workup and very clear about my heart health.",
+    "She put my mind at ease about my palpitations and explained everything."
+  ],
+  "profile_text": "Dr. Elena Vasquez is a board-certified cardiologist specializing in heart rhythm disorders, coronary artery disease, hypertension, and heart failure. She evaluates patients with chest pain, palpitations, shortness of breath, and exertional fatigue of cardiac origin.",
+  "guideline_text": "Cardiac evaluation of fatigue: when fatigue is accompanied by chest pain, palpitations, exertional breathlessness, or syncope, evaluate with an ECG, echocardiography, and ambulatory rhythm monitoring. Cardiac causes of fatigue are considered when symptoms are activity-related or accompanied by cardiovascular findings. Fatigue driven by nutritional deficiency or anemia without cardiac symptoms is outside cardiology's scope and should be directed to primary care or hematology.",
+  "source": ["sample"]
+}

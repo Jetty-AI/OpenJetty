@@ -197,8 +197,13 @@ FastAPI (Python), **PostgreSQL** (JSONB), local disk for files, deploy on **Rail
 ## 5. 📁 Sample Business Data
 
 **What gets built:** a set of **hand-authored Raw business records (`architecture.md` §4.5)** for
-~5–10 sample doctors, saved as JSON and seeded via `/ingest/business`. We **write** realistic data
-(staged) — there is no scraping and no external API. A2 structures it into Business Memory.
+~5–10 sample doctors, saved as JSON in `sample-data/businesses/` and seeded via `/ingest/business`.
+We **write** realistic data (staged) — there is no scraping and no external API. A2 structures it
+into Business Memory.
+
+> ✅ **Already provided:** 8 doctor records live in `sample-data/businesses/` (3 hero + 5 more), and
+> the demo patient's 3 lab-report PDFs + situation text live in `sample-data/patient/`. See
+> `sample-data/README.md`. Use these — no need to re-author them.
 
 ### What to write per doctor (§4.5 shape)
 - `name`, `specialty`, `location`, `rating`, `review_count`
@@ -216,12 +221,12 @@ gastroenterologist and an internist who are clearly less-perfect fits.
 - [ ] 3 hero doctors fully written (sharp, distinct specialties)
 - [ ] 2–7 more sample doctors for a fuller list
 - [ ] Each matches the §4.5 field names exactly
-- [ ] Saved as `sample-data/*.json`
+- [x] Saved as `sample-data/businesses/*.json` (already done — 8 doctors)
 - [ ] Loaded via the backend seed script → `/ingest/business`
 
 **Paste-to-Claude-Code:**
 > "Create 5–10 realistic SAMPLE doctor records (no scraping, no APIs) in the Raw business record
-> shape from architecture.md §4.5, saved as JSON in a sample-data/ folder. Make 3 'hero' doctors
+> shape from architecture.md §4.5, saved as JSON in sample-data/businesses/. Make 3 'hero' doctors
 > distinct (a hematologist for iron deficiency, plus clearly weaker-fit specialties) with written
 > reviews, profile_text, and guideline_text. Then load them via the backend seed script to
 > /ingest/business."

@@ -50,8 +50,8 @@ Each phase is a working slice. After Phase 1 there is already something to demo.
 
 **Build:**
 - Scaffold a monorepo: `frontend/` (Next.js + Tailwind, App Router), `backend/` (FastAPI with a
-  `/health` route returning `{status:'ok'}` and CORS enabled), `sample-data/` (folder for the
-  hand-written business JSON records).
+  `/health` route returning `{status:'ok'}` and CORS enabled), and `sample-data/` (already
+  populated — `businesses/` doctor JSON records + `patient/` demo upload PDFs).
 - Backend deps: fastapi, uvicorn[standard], anthropic, psycopg2-binary, python-multipart,
   python-dotenv, pydantic, PyMuPDF. Create `.env.example` with `ANTHROPIC_API_KEY`,
   `CLAUDE_MODEL=claude-fable-5`, `DATABASE_URL`.
@@ -93,7 +93,7 @@ re-uploading adds to memory, doesn't reset it.
 a written *why-this-fits* explanation.
 
 **Build (in order):**
-1. **Sample business data** (`sample-data/*.json`): hand-write 3–5 realistic doctor records in the
+1. **Sample business data** (`sample-data/businesses/*.json` — ✅ already provided, 8 doctors): realistic doctor records in the
    **Raw business record** shape (§4.5) — name, rating, sample reviews, a written `profile_text`, and
    a written `guideline_text` (the doctor's "protocols"). No scraping, no APIs. Make the 3 **hero**
    doctors distinct: a hematologist for iron deficiency/malabsorption (the right match for the
@@ -106,7 +106,7 @@ a written *why-this-fits* explanation.
    Match result (§4.3): ranked matches with score, confidence, and a **why-fit explanation that
    references the user's real details**. Reasoning over both memories — not keyword search.
 4. **Backend** `POST /ingest/business` (calls A2, stores Business Memory) + `POST /match` (loads user
-   + all business memories, calls A3). Seed step ingests `sample-data/*.json` on startup.
+   + all business memories, calls A3). Seed step ingests `sample-data/businesses/*.json` on startup.
 5. **Frontend — Screen 3 (Matches):** cards with name, specialty, rating, score, and the why-fit
    explanation → `/match`; ranked by score; clicking a card selects that doctor for later screens.
 
