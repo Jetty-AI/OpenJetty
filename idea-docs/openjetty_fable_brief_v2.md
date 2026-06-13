@@ -50,7 +50,7 @@ change that affects I-140 portability, an OPT end date that creates
 unlawful presence risk) 
 
 Step 2 --- Claude Model fetches live data The agent
-uses web search tools to fetch: Current USCIS Visa Bulletin (updated
+uses web search (Tavily) tools to fetch: Current USCIS Visa Bulletin (updated
 monthly --- what priority dates are current right now) Current
 processing times for the relevant form types (I-485, I-140, etc.) Any
 recent USCIS policy updates relevant to the user's case type 
@@ -137,9 +137,8 @@ calculate that the job change happened 5 months after approval (under
 critical risk requiring immediate legal consultation. TECH STACK Keep it
 simple. Do not over-engineer. Backend: Python + FastAPI Frontend: Simple
 HTML + vanilla JavaScript (no React needed --- keep it fast to build)
-AI: Anthropic SDK, model claude-fable-5 (use whatever model ID Anthropic
-gives you Saturday morning) Web search: Use the web search tool
-available in Claude Code to fetch live USCIS data Deploy: Railway
+AI: Anthropic SDK, model (use whatever model ID Anthropic
+gives you Saturday morning) Web search: Use the web search (Tavily) tool to fetch live USCIS data Deploy: Railway
 (connect GitHub repo, auto-deploys on push) No database needed ---
 in-memory is fine for the demo SELF-CORRECTION INSTRUCTION You have full
 autonomy to build, test, and fix this without asking for permission at
