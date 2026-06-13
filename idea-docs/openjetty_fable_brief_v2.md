@@ -194,13 +194,5 @@ openjetty/
   .env.example
 
 
-  API endpoints:
-POST /analyze
-  body: { situation: string, documents: base64[] (optional) }
-  response: streamed text (the reasoning + structured result)
-
-POST /concierge
-  body: { attorney_id: string, message: string, history: [{role, content}] }
-  response: streamed text (answers from docs only)
 
   
