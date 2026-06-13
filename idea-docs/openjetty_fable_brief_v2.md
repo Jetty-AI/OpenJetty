@@ -1,26 +1,42 @@
 OpenJetty --- Fable 5 Build Day Brief Anthropic Hackathon · Saturday ·
-Paste this into Claude Code to begin THE PROBLEM 45 million immigrants
+Paste this into Claude Code to begin 
+
+THE PROBLEM 45 million immigrants
 in America cannot afford an immigration lawyer for every question. When
 their status changes, when a policy shifts at USCIS, when they need to
 know if they qualify for a benefit --- they are on their own. They
 search Google, read Reddit, and hope they are not making a mistake that
-costs them their visa or their green card. Immigration lawyers charge
+costs them their visa or their green card. 
+
+Immigration lawyers charge
 \$300--500 per hour. Most immigrants cannot afford to call for a simple
-question. The information exists --- USCIS publishes everything publicly
+question. 
+
+The information exists --- USCIS publishes everything publicly
 --- but it is buried in government jargon, constantly changing, and
-impossible to navigate without expertise. WHAT YOU ARE BUILDING
+impossible to navigate without expertise. 
+
+WHAT YOU ARE BUILDING
 OpenJetty Immigration Navigator --- a web app where an immigrant
 describes their situation in plain English, and the AI reasons through
 it, fetches current real data from USCIS, and gives them a specific,
-accurate answer about their situation and their next step. This is not a
-chatbot that answers from training data. It is an agent that goes out,
-gets live information, reasons across it, and gives a personalized
-answer. That is the core innovation. THE FULL USER FLOW (build exactly
-this) Step 1 --- User describes their situation + optionally uploads
-documents Two inputs on the same screen: 1. A text area where the user
+accurate answer about their situation and their next step. 
+
+This is not a chatbot that answers from training data. It is an agent that goes out,gets live information, reasons across it, and gives a personalized
+answer. That is the core innovation. 
+
+THE FULL USER FLOW (build exactly
+this) 
+
+Step 1 --- User describes their situation + optionally uploads
+documents Two inputs on the same screen: 
+
+1. A text area where the user
 types in plain English: "I am on an H-1B visa. My employer just filed
 for my green card. My priority date is March 2019 EB-2 India. I want to
-know where I stand and what I should be doing right now." 2. An optional
+know where I stand and what I should be doing right now." 
+
+2. An optional
 file upload area: "Upload your documents for deeper analysis (I-94,
 approval notices, I-140, passport pages)"
 
@@ -31,36 +47,51 @@ user described The power move: The AI compares what the user said
 against what the documents actually show --- and surfaces discrepancies
 the user did not know about (e.g. a travel gap during cap-gap, a job
 change that affects I-140 portability, an OPT end date that creates
-unlawful presence risk) Step 2 --- Fable 5 fetches live data The agent
+unlawful presence risk) 
+
+Step 2 --- Fable 5 fetches live data The agent
 uses web search tools to fetch: Current USCIS Visa Bulletin (updated
 monthly --- what priority dates are current right now) Current
 processing times for the relevant form types (I-485, I-140, etc.) Any
-recent USCIS policy updates relevant to the user's case type Step 3 ---
+recent USCIS policy updates relevant to the user's case type 
+
+Step 3 ---
 Fable 5 reasons across everything The agent combines what the user told
 it with the live data it fetched and reasons step by step: What is the
-user's current status? What is their priority date vs the current cutoff
+user's current status? 
+What is their priority date vs the current cutoff
 date? Are they eligible to file I-485 right now or still waiting? What
 is the estimated wait time based on current processing? What should they
 do in the next 30 days? Show the reasoning out loud as it streams ---
-this is the most impressive part of the demo. Step 4 --- Clear, specific
+this is the most impressive part of the demo. 
+
+Step 4 --- Clear, specific
 answer Not a wall of text. A structured result: Your situation: \[one
 paragraph summary\] Where you stand: \[specific status --- e.g. "Your
 priority date is current. You can file I-485 now."\] Your next step:
 \[one specific action --- e.g. "File I-485 within the next 60 days
 before the bulletin retrogresses"\] What to watch: \[one thing to
 monitor --- e.g. "Check the November visa bulletin on October 8th"\]
+
+
 Step 5 --- Match to a specialist (optional, show if time allows) Show 3
 immigration attorneys in San Francisco who specialize in the user's case
 type (EB-2 India, H-1B to green card). These
 
 can be real attorneys pulled from web search or hardcoded mock data ---
-either is fine for the demo. Step 6 --- Attorney AI concierge (the "both
+either is fine for the demo. 
+
+Step 6 --- Attorney AI concierge (the "both
 sides" moment) Click on one attorney. Their AI concierge opens ---
 pre-loaded with 3 documents (a mock intake FAQ, a mock fee schedule, a
-mock what-to-expect guide). The user can ask: "Do you do free
+mock what-to-expect guide). 
+
+The user can ask: "Do you do free
 consultations? What documents should I bring?" The AI answers from those
 documents only. RUBRIC --- Grade yourself against this before stopping
-After building each section, check it against this list. Do not stop
+After building each section, check it against this list. 
+
+Do not stop
 until every item passes. The app: Loads at a live public URL without
 errors Works on mobile (basic responsive layout) No broken links, no
 console errors The analysis flow: User can type their situation in plain
@@ -68,7 +99,9 @@ English and submit Document upload works --- PDFs and images accepted,
 processed correctly If documents are uploaded, the AI cross-references
 them against the user's description and flags any discrepancies The
 agent fetches at least one piece of live data from USCIS or a public
-source (not just training data) The reasoning streams visibly --- the
+source (not just training data) 
+
+The reasoning streams visibly (Maybe fastapi streaming - you decide the best possible ways to build this product) --- the
 user can see the agent thinking step by step The final result is
 structured: situation summary, where they stand, next step, what to
 watch The result is specific to what the user typed --- not a generic
@@ -118,7 +151,9 @@ every rubric item passes. If you are genuinely stuck on something after
 two attempts, describe the problem in one sentence and ask a specific
 question. Do not ask open-ended questions like "how should I proceed?"
 
-WHAT NOT TO BUILD Cut these completely --- they add time and zero demo
+WHAT NOT TO BUILD 
+Cut these completely --- they add time and zero demo
+
 value: User login or accounts A real attorney database or Google Places
 integration Payment processing Email or SMS notifications A mobile app
 Any database (in-memory is fine) Multiple languages (English only) Admin
