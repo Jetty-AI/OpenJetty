@@ -1,0 +1,134 @@
+@import "tailwindcss";
+
+/* ============================================================
+   OpenJetty design system
+   A calm, trustworthy palette for a legal/immigration product:
+   deep navy ink, a confident blue brand, soft neutral surfaces.
+   ============================================================ */
+:root {
+  --background: #f7f8fb;
+  --surface: #ffffff;
+  --foreground: #0f172a;        /* slate-900 ink */
+  --muted: #64748b;             /* slate-500 */
+  --border: #e6e8ef;
+
+  --brand: #2563eb;             /* blue-600 */
+  --brand-strong: #1d4ed8;      /* blue-700 */
+  --brand-soft: #eff4ff;        /* tinted brand wash */
+  --accent: #06b6d4;            /* cyan-500, for subtle gradients */
+
+  --success: #16a34a;
+  --warning: #d97706;
+  --danger: #dc2626;
+
+  --radius: 16px;
+  --shadow-sm: 0 1px 2px rgba(15, 23, 42, 0.06);
+  --shadow-md: 0 8px 24px -8px rgba(15, 23, 42, 0.12);
+  --shadow-lg: 0 24px 60px -20px rgba(37, 99, 235, 0.25);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-accent: var(--accent);
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-danger: var(--danger);
+  --radius-card: var(--radius);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Reusable component classes — building blocks every screen reuses. */
+@layer components {
+  .oj-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+  }
+
+  .oj-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 0.7rem 1.25rem;
+    transition: transform 0.12s ease, box-shadow 0.2s ease, background 0.2s ease;
+    cursor: pointer;
+  }
+  .oj-btn:active { transform: translateY(1px); }
+  .oj-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+
+  .oj-btn-primary {
+    background: linear-gradient(135deg, var(--brand) 0%, var(--brand-strong) 100%);
+    color: #fff;
+    box-shadow: var(--shadow-md);
+  }
+  .oj-btn-primary:not(:disabled):hover { box-shadow: var(--shadow-lg); }
+
+  .oj-btn-ghost {
+    background: var(--surface);
+    color: var(--foreground);
+    border: 1px solid var(--border);
+  }
+  .oj-btn-ghost:hover { background: var(--brand-soft); }
+}
+
+/* Entrance animation for result cards. */
+@keyframes oj-rise {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.oj-rise {
+  opacity: 0;
+  animation: oj-rise 0.45s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Blinking caret shown at the end of streaming reasoning. */
+@keyframes oj-blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+.oj-caret {
+  display: inline-block;
+  width: 0.5rem;
+  height: 1.05rem;
+  margin-left: 2px;
+  vertical-align: text-bottom;
+  background: var(--brand);
+  border-radius: 1px;
+  animation: oj-blink 1s step-end infinite;
+}
+
+/* Concierge drawer slide-in. */
+@keyframes oj-slide-in {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+.oj-drawer {
+  animation: oj-slide-in 0.28s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .oj-rise { animation: none; opacity: 1; }
+  .oj-caret { animation: none; }
+  .oj-drawer { animation: none; }
+}
+
+.h-4\.5 { height: 1.125rem; }
+.w-4\.5 { width: 1.125rem; }
+
