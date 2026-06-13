@@ -1,0 +1,131 @@
+# OpenJetty Test Dataset – Immigration User Scenarios
+
+## H-1B & Employment
+
+1. I'm on an H-1B visa. My priority date is getting close to becoming current. I visited India six months ago and have a 5-year-old daughter. What happens if I lose my job next month?
+
+2. I have been on H-1B since 2020 and my employer just announced layoffs. My I-140 is approved. Can I stay in the US if I get fired?
+
+3. My H-1B expires in 10 months and my employer says they might not renew it. What are my options?
+
+4. I changed employers last year using an H-1B transfer. Does that affect my green card process?
+
+5. My employer filed PERM but I want to join another startup. Will I lose everything?
+
+---
+
+## Green Card & Priority Date
+
+6. My EB-2 India priority date is March 2015. The visa bulletin moved forward this month. Can I finally file I-485?
+
+7. I have an approved I-140 but my priority date is still far away. Is there anything I should be doing now?
+
+8. I was born in India but my spouse was born in Canada. Can that help us get the green card faster?
+
+9. My priority date became current while I was traveling outside the US. Did I miss my chance?
+
+10. I accidentally entered the wrong priority date when filling a form. Is that a serious issue?
+
+---
+
+## Travel
+
+11. I visited India for four months while on H-1B. Could that affect my green card timeline?
+
+12. My passport expires next year and I'm planning to travel internationally. Should I renew before filing I-485?
+
+13. I left the US while my change of status was pending. Did I abandon my application?
+
+14. I traveled during STEM OPT and now I'm worried I made a mistake. What should I check?
+
+15. I have Advance Parole but also a valid H-1B. Which should I use when re-entering the US?
+
+---
+
+## Family
+
+16. I have a daughter who turns 21 next year. Will she still be included in my green card application?
+
+17. My spouse is on H-4 and wants to start working. Can they apply for work authorization?
+
+18. My son was born in India but has lived in the US since he was two. Does that change anything?
+
+19. My wife recently got her own H-1B. Should we keep H-4 as a backup?
+
+20. I got married after my I-140 approval. Can my spouse be added later?
+
+---
+
+## Job Changes
+
+21. I changed jobs five months after my I-140 approval. Did I lose my green card process?
+
+22. I switched employers after 10 years on H-1B. Does my priority date stay the same?
+
+23. My startup is being acquired by another company. Will that impact my immigration status?
+
+24. My employer reduced my salary because of budget cuts. Could that create visa problems?
+
+25. I work remotely from another state now. Do I need to update anything with USCIS?
+
+---
+
+## F-1 / OPT / H-1B Transition
+
+26. I graduated this year and I'm on OPT. My employer wants to sponsor H-1B next year. What should I be doing now?
+
+27. My STEM OPT expires in three months and I wasn't selected in the H-1B lottery. What options do I have?
+
+28. I accidentally worked one extra week after my OPT expired. How serious is that?
+
+29. I want to start my own company while on STEM OPT. Is that allowed?
+
+30. My H-1B wasn't selected and I'm thinking about going back to school. Would that let me stay legally?
+
+---
+
+## Complex Multi-Factor Scenarios
+
+31. I'm on H-1B with an approved I-140. I changed jobs in August 2023, have a wife on H-4, and two kids in elementary school. My priority date is approaching. Did changing employers affect my green card?
+
+32. I recently lost my H-1B job after working in the US for eight years. My wife works on H-4 EAD and we bought a house last year. How much time do I have to find another employer?
+
+33. My priority date is almost current, but I accepted a remote job in another state. I also traveled to India for six months last year. Should I be worried?
+
+34. I spent eight months outside the US taking care of my parents. My employer kept me on payroll. Will this affect my future citizenship eligibility?
+
+35. My H-1B extension is pending, my passport expires in six months, and I need to travel urgently for my sister's wedding. What risks should I know about?
+
+36. My daughter turns 21 in four months and our green card priority date is still not current. Will she age out of the application?
+
+37. I have an approved I-140 from my previous employer, but I joined a startup after only four months. My new company hasn't started PERM yet. What should I do?
+
+38. My wife and I are both on H-1B visas. She received an offer from another company while my employer is filing my I-485. Could our decisions affect each other?
+
+39. I came to the US on F-1, completed OPT, moved to H-1B, and now my employer wants me to relocate to Canada for a year before bringing me back. How would that affect my green card?
+
+40. I recently got divorced while my employment-based green card process is ongoing. My ex-spouse was on H-4 and our son is included in the application. What changes now?
+
+---
+
+## Intentional Edge Cases
+
+41. I forgot to renew my passport before filing for H-1B extension. Is my application still valid?
+
+42. I changed employers two weeks before my priority date became current. Can I still file I-485?
+
+43. My employer says they will withdraw my I-140 because I resigned. Does that erase my priority date?
+
+44. I have an approved I-140 but I was outside the US when layoffs happened. Can I still return?
+
+45. My son was born in Canada, my wife was born in India, and I was born in Nepal. Which country determines our green card wait time?
+
+46. I have been working remotely from India for the past four months while still employed by my US company. Could that impact my H-1B status?
+
+47. I received an RFE on my I-140 while changing jobs. Should I respond or let my old employer handle it?
+
+48. My H-1B grace period ends next week but I just received a verbal job offer. Am I safe?
+
+49. My company is merging with another business and HR says immigration paperwork will transfer automatically. Is that always true?
+
+50. My priority date is current today, but next month's visa bulletin may retrogress. Should I file immediately or wait?
