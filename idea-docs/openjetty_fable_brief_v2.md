@@ -1,4 +1,4 @@
-OpenJetty --- Fable 5 Build Day Brief Anthropic Hackathon · Saturday ·
+OpenJetty --- Claude Build Day Brief Anthropic Hackathon · Saturday ·
 Paste this into Claude Code to begin 
 
 THE PROBLEM 45 million immigrants
@@ -42,21 +42,21 @@ approval notices, I-140, passport pages)"
 
 Accept PDF and image files Label it clearly as optional --- plain
 English alone is enough to get a useful answer If documents are
-uploaded, Fable 5 reads them and cross-references them against what the
+uploaded, Claude Model reads them and cross-references them against what the
 user described The power move: The AI compares what the user said
 against what the documents actually show --- and surfaces discrepancies
 the user did not know about (e.g. a travel gap during cap-gap, a job
 change that affects I-140 portability, an OPT end date that creates
 unlawful presence risk) 
 
-Step 2 --- Fable 5 fetches live data The agent
+Step 2 --- Claude Model fetches live data The agent
 uses web search tools to fetch: Current USCIS Visa Bulletin (updated
 monthly --- what priority dates are current right now) Current
 processing times for the relevant form types (I-485, I-140, etc.) Any
 recent USCIS policy updates relevant to the user's case type 
 
 Step 3 ---
-Fable 5 reasons across everything The agent combines what the user told
+Claude Model reasons across everything The agent combines what the user told
 it with the live data it fetched and reasons step by step: What is the
 user's current status? 
 What is their priority date vs the current cutoff
@@ -165,7 +165,7 @@ now --- live data from USCIS, current visa bulletin, current processing
 times --- and tells them exactly where they stand and what to do next.
 This is not a chatbot answering from old training data. This is an agent
 that reasons across live information and gives you a specific answer
-about your specific case. We built this in one day using Fable 5. The
+about your specific case. We built this in one day using Claude Model. The
 same architecture works for any professional services vertical ---
 legal, financial, medical navigation. But we started here because this
 is where the information asymmetry is most painful and the stakes are
@@ -175,6 +175,6 @@ should show: Long stretches of the model working without human
 intervention The model catching and fixing its own errors The model
 running the rubric check itself and deciding when it is done
 
-OpenJetty Fable 5 Brief v2.1 --- Immigration Navigator --- June 2026
+OpenJetty Claude Model Brief v2.1 --- Immigration Navigator --- June 2026
 Added: Document upload feature with cross-referencing against user
 description
