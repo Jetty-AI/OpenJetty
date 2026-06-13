@@ -180,19 +180,6 @@ description
 
 ###Enable CORS in FastAPI for all origins (demo only).
 
-Project structure:
-openjetty/
-  backend/
-    main.py         # FastAPI app
-    analyzer.py     # Claude API call with web search + streaming
-    documents.py    # PDF/image parsing
-    attorneys.py    # hardcoded mock attorney data + concierge docs
-    requirements.txt
-  frontend/
-    index.html      # single page, all JS inline or in app.js
-    app.js
-  .env.example
 
-
-
+Matching logic: after /analyze completes, pass the full analysis result + all hardcoded attorney profiles to Claude in a single prompt and ask it to rank the attorneys by fit for this specific user's situation, with a one-line reason per attorney. Return the ranked list. No keyword matching, no scoring formula — pure Claude reasoning.
   
