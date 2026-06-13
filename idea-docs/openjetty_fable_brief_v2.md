@@ -138,7 +138,9 @@ critical risk requiring immediate legal consultation. TECH STACK Keep it
 simple. Do not over-engineer. Backend: Python + FastAPI Frontend: Simple
 HTML + vanilla JavaScript (no React needed --- keep it fast to build)
 AI: Anthropic SDK, model (use whatever model ID Anthropic
-gives you Saturday morning) Web search: Use the web search (For live USCIS data: the backend calls the Anthropic API with web_search tool enabled (tool_type: "web_search_20250305"). This is NOT Claude Code's own search — it's a tool passed in the API call so the model can search during the /analyze request.) tool to fetch live USCIS data Deploy: Railway
+gives you Saturday morning) Web search: Use the web search (For live USCIS data: the backend calls the Anthropic API with web_search tool enabled (tool_type: "web_search_20250305"). This is NOT Claude Code's own search — it's a tool passed in the API call so the model can search during the /analyze request.) tool to fetch live USCIS data 
+
+Deploy: Railway
 (connect GitHub repo, auto-deploys on push) No database needed ---
 in-memory is fine for the demo SELF-CORRECTION INSTRUCTION You have full
 autonomy to build, test, and fix this without asking for permission at
@@ -183,3 +185,4 @@ description
 
 Matching logic: after /analyze completes, pass the full analysis result + all hardcoded attorney profiles to Claude in a single prompt and ask it to rank the attorneys by fit for this specific user's situation, with a one-line reason per attorney. Return the ranked list. No keyword matching, no scoring formula — pure Claude reasoning.
   
+Give clear instructions whenever you want something from the user/ want the user to do something.
