@@ -50,7 +50,7 @@ change that affects I-140 portability, an OPT end date that creates
 unlawful presence risk) 
 
 Step 2 --- Claude Model fetches live data The agent
-uses web search (Tavily) tools to fetch: Current USCIS Visa Bulletin (updated
+uses web search (For live USCIS data: the backend calls the Anthropic API with web_search tool enabled (tool_type: "web_search_20250305"). This is NOT Claude Code's own search — it's a tool passed in the API call so the model can search during the /analyze request.) tools to fetch: Current USCIS Visa Bulletin (updated
 monthly --- what priority dates are current right now) Current
 processing times for the relevant form types (I-485, I-140, etc.) Any
 recent USCIS policy updates relevant to the user's case type 
@@ -101,7 +101,7 @@ them against the user's description and flags any discrepancies The
 agent fetches at least one piece of live data from USCIS or a public
 source (not just training data) 
 
-The reasoning streams visibly (Maybe fastapi streaming - you decide the best possible ways to build this product) --- the
+The reasoning streams visibly (Maybe fastapi streaming - Streaming: FastAPI StreamingResponse using async generators. Frontend uses fetch() with a ReadableStream reader, appending chunks to a <div> in real time. No SSE library needed. you decide the best possible ways to build this product) --- the
 user can see the agent thinking step by step The final result is
 structured: situation summary, where they stand, next step, what to
 watch The result is specific to what the user typed --- not a generic
@@ -138,7 +138,7 @@ critical risk requiring immediate legal consultation. TECH STACK Keep it
 simple. Do not over-engineer. Backend: Python + FastAPI Frontend: Simple
 HTML + vanilla JavaScript (no React needed --- keep it fast to build)
 AI: Anthropic SDK, model (use whatever model ID Anthropic
-gives you Saturday morning) Web search: Use the web search (Tavily) tool to fetch live USCIS data Deploy: Railway
+gives you Saturday morning) Web search: Use the web search (For live USCIS data: the backend calls the Anthropic API with web_search tool enabled (tool_type: "web_search_20250305"). This is NOT Claude Code's own search — it's a tool passed in the API call so the model can search during the /analyze request.) tool to fetch live USCIS data Deploy: Railway
 (connect GitHub repo, auto-deploys on push) No database needed ---
 in-memory is fine for the demo SELF-CORRECTION INSTRUCTION You have full
 autonomy to build, test, and fix this without asking for permission at
@@ -177,3 +177,30 @@ running the rubric check itself and deciding when it is done
 OpenJetty Claude Model Brief v2.1 --- Immigration Navigator --- June 2026
 Added: Document upload feature with cross-referencing against user
 description
+
+###Enable CORS in FastAPI for all origins (demo only).
+
+Project structure:
+openjetty/
+  backend/
+    main.py         # FastAPI app
+    analyzer.py     # Claude API call with web search + streaming
+    documents.py    # PDF/image parsing
+    attorneys.py    # hardcoded mock attorney data + concierge docs
+    requirements.txt
+  frontend/
+    index.html      # single page, all JS inline or in app.js
+    app.js
+  .env.example
+
+
+  API endpoints:
+POST /analyze
+  body: { situation: string, documents: base64[] (optional) }
+  response: streamed text (the reasoning + structured result)
+
+POST /concierge
+  body: { attorney_id: string, message: string, history: [{role, content}] }
+  response: streamed text (answers from docs only)
+
+  
